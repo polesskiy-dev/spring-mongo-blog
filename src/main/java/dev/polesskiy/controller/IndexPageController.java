@@ -1,4 +1,4 @@
-package dev.polesskiy.rest.controller;
+package dev.polesskiy.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;

@@ -6,7 +6,7 @@ import org.mongodb.morphia.Morphia;
 import org.mongodb.morphia.dao.BasicDAO;
 import org.springframework.stereotype.Repository;
 
-@Repository
+//@Repository
 public class UserDao extends BasicDAO<User, String>{
     public UserDao(Class<User> entityClass, MongoClient mongoClient, Morphia morphia, String dbName) {
         super(entityClass, mongoClient, morphia, dbName);
