@@ -12,6 +12,7 @@
     <properties>
         <jdk.version>1.7</jdk.version>
         <spring.version>4.2.5.RELEASE</spring.version>
+        <version.spring.mongodb>1.4.0.RELEASE</version.spring.mongodb>
         <aspectjweaver.version>1.8.9</aspectjweaver.version>
         <log4j.version>1.2.17</log4j.version>
         <junit.version>4.12</junit.version>
@@ -43,6 +44,11 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
             <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-mongodb</artifactId>
+            <version>${version.spring.mongodb}</version>
         </dependency>
 
         <!--Spring AOP-->
