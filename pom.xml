@@ -45,11 +45,6 @@
             <artifactId>spring-context</artifactId>
             <version>${spring.version}</version>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.data</groupId>
-            <artifactId>spring-data-mongodb</artifactId>
-            <version>${version.spring.mongodb}</version>
-        </dependency>
 
         <!--Spring AOP-->
         <dependency>
@@ -84,18 +79,21 @@
         </dependency>
 
 
-        <!-- Morphia -->
+        <!-- Spring Data MongoDB -->
+
         <dependency>
-            <groupId>org.mongodb.morphia</groupId>
-            <artifactId>morphia</artifactId>
-            <version>1.2.0</version>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-mongodb</artifactId>
+            <version>${version.spring.mongodb}</version>
         </dependency>
 
         <dependency>
-            <groupId>com.google.code.morphia</groupId>
-            <artifactId>morphia-validation</artifactId>
-            <version>0.101.0</version>
+            <groupId>org.mongodb</groupId>
+            <artifactId>mongo-java-driver</artifactId>
+            <version>2.11.4</version>
         </dependency>
+
+        <!-- jstl -->
 
         <dependency>
             <groupId>jstl</groupId>

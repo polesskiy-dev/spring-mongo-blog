@@ -5,6 +5,21 @@ Provides RESTfull API for user&posts creating and managing.
 Allow to register and creating new posts for users,
 managing user accounts for administrators.
 
+## Common structure
+---
+
+| -| - |
+| Controller | Handle browser requests |
+| Service | Business logic methods |
+| Repository | Work with DB as with collections |
+| Spring Data MongoDB | ODM |
+| MongoDB | DB |
+
+| - | -|
+| Config | Configuration classes |
+| Entity | Domain models |
+
+
 ## API reference
 ---
 ### Auth

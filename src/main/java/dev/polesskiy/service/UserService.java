@@ -1,7 +1,7 @@
 package dev.polesskiy.service;
 
-import dev.polesskiy.dao.UserDao;
 import dev.polesskiy.entity.User;
+import dev.polesskiy.repository.user.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,8 +10,8 @@ import java.util.List;
 
 @Service
 public class UserService {
-//    @Autowired
-//    private UserDao userDao;
+    @Autowired
+    UserRepository userRepository;
 
     public void add(User user) {
         System.out.printf("Creating user %s", user);

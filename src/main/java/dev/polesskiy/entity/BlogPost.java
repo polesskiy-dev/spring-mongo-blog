@@ -3,10 +3,9 @@ package dev.polesskiy.entity;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.bson.types.ObjectId;
-import org.mongodb.morphia.annotations.Entity;
-import org.mongodb.morphia.annotations.Id;
-import org.mongodb.morphia.annotations.Reference;
-import org.mongodb.morphia.annotations.Serialized;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.annotation.Reference;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.io.File;
 import java.io.Serializable;
@@ -14,7 +13,7 @@ import java.io.Serializable;
 /**
  * Blog post entity
  */
-@Entity("blog-posts")
+@Document
 public class BlogPost implements Serializable {
     @Id
     private ObjectId id;
@@ -25,7 +24,6 @@ public class BlogPost implements Serializable {
     private String title;
     private String text;
 
-    @Serialized
     //will be converted to binary by Morphia
     private File attachedFile;
 

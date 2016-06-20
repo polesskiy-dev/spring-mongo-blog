@@ -3,10 +3,9 @@ package dev.polesskiy.entity;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.bson.types.ObjectId;
-import org.mongodb.morphia.annotations.Entity;
-import org.mongodb.morphia.annotations.Id;
-import org.mongodb.morphia.annotations.PrePersist;
-import org.mongodb.morphia.annotations.Reference;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.annotation.Reference;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.io.Serializable;
 import java.util.List;
@@ -14,7 +13,7 @@ import java.util.List;
 /**
  * User entity
  */
-@Entity("users")
+@Document
 public class User implements Serializable {
     @Id
     private ObjectId id;
@@ -35,7 +34,6 @@ public class User implements Serializable {
      * Hash password.
      * Set user as confirmed (stub)
      */
-    @PrePersist
     void prePersist() {
         //TODO hash passswrod field
         this.password = this.password;
